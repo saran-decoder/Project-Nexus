@@ -14,6 +14,7 @@
                 <img src="https://img.freepik.com/premium-photo/mountain-landscape-lake-with-crystal-clear-blue-water-perfect-blue-sky-generated-by-ai_995428-5062.jpg" alt="" />
             </div>
             <div class="reglog-form">
+                <!-- That all inputs can be send through API -->
                 <div class="reglog-form-inner">
                     <h1>Signup</h1>
                     <p class="body-text">Create an account to get started.</p>
@@ -54,21 +55,21 @@
             
                     <div class="reglog-form-group">
                         <label for="username">Username <span class="required-star">*</span></label>
-                        <input type="text" autocomplete="off" placeholder="Account Username" id="username">
+                        <input type="text" autocomplete="off" placeholder="Username" id="username">
                     </div>
                     <div class="reglog-form-group">
                         <label for="email">Email <span class="required-star">*</span></label>
-                        <input type="email" autocomplete="off" placeholder="Account Email" id="email">
+                        <input type="email" autocomplete="off" placeholder="Email Address" id="email">
                     </div>
                     <div class="reglog-form-group">
                         <label for="pwd">Password <span class="required-star">*</span></label>
-                        <input autocomplete="off" type="password" placeholder="Account Password" id="pwd">
+                        <input autocomplete="off" type="password" placeholder="Password" id="pwd">
                     </div>
                     <div class="reglog-form-group">
                         <label for="confirm_pwd">Confirm Password <span class="required-star">*</span></label>
                         <input autocomplete="off" type="password" placeholder="Confirm Password" id="confirm_pwd">
                     </div>
-                    <button type="submit" class="rounded-button reglog-cta" onclick="validateForm()">Sign Up</button>
+                    <button type="submit" class="rounded-button reglog-cta" onclick="signupValidate()">Sign Up</button>
                     <p class="register-div">Already have an account? <a href="./index.html" class="link create-account">Sign In</a></p>
             
                 </div>

@@ -9,11 +9,12 @@
     </head>
     <body>
         <div class="reglog-container">
+            <div id="toast"></div>
             <div class="onboarding" id="boids-canvas">
                 <img src="https://img.freepik.com/premium-photo/aurora-bifida-renowned-stokksnes-mountains-vestrahorn-cape-are-northern-lights-icelandic-reflection-crystalclear-water-with-vast-sky-backdrop-generative-ai_638974-57.jpg" alt="" />
             </div>
             <div class="reglog-form">
-                <div id="toast"></div>
+                <!-- That all inputs can be send through API -->
                 <div class="reglog-form-inner">
                     <h1>Login</h1>
                     <p class="body-text">If you have an account please login.</p>
@@ -54,11 +55,11 @@
             
                     <div class="reglog-form-group">
                         <label for="email">Email <span class="required-star">*</span></label>
-                        <input type="email" autocomplete="off" placeholder="Account Email ?" id="email">
+                        <input type="email" autocomplete="off" placeholder="Email Address" id="email">
                     </div>
                     <div class="reglog-form-group">
                         <label for="pwd">Password <span class="required-star">*</span></label>
-                        <input autocomplete="off" type="password" placeholder="Account Password ?" id="pwd">
+                        <input autocomplete="off" type="password" placeholder="Password" id="pwd">
                     </div>
             
                     <div class="reglog-form-group single-row">
@@ -69,7 +70,7 @@
                         <a href="#" class="link forgot-link">Forgot Password ?</a>
                     </div>
             
-                    <a href="#" class="rounded-button reglog-cta">Login</a>
+                    <button type="submit" class="rounded-button reglog-cta" onclick="signinValidate()">Sign In</button>
             
                     <div class="register-div">Not registered yet? <a href="./signup.html" class="link create-account" -link>Create an account</a></div>
                 </div>

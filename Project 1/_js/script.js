@@ -10,8 +10,33 @@ var options = {
 var boidsCanvas = new BoidsCanvas(canvasDiv, options);
 
 
+// Signin Form Validation JavaScript
+function signinValidate() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('pwd').value;
+    
+    // Regular expression for email validation
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (!email.match(emailPattern)) {
+        showToast("Please Enter Your Valid Email");
+        return false;
+    }
+    if (password === "") {
+        showToast("Please Enter Your Valid Password");
+        return false;
+    }
+
+    showToast("Login Success: It Forwarding My Portfolio!", true);
+    // Function to reload the page after 4 seconds
+    setTimeout(function() {
+        window.location.href = "https://saran.selfmade.one";
+    }, 4000);
+    return true;
+}
+
 // Signup Form Validation JavaScript
-function validateForm() {
+function signupValidate() {
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('pwd').value;

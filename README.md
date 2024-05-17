@@ -29,25 +29,6 @@ Welcome to Project Nexus, a web development project focusing on crafting an attr
    - Upload the project to a GitHub repository named "project-nexus."
    - Submit the GitHub repo link at the end of the project review session.
 
-## Project Structure
-
-```
-project-nexus/
-│
-├── _css/
-│   └── styles.css      # CSS file for styling
-│
-├── images/
-│   └── icon.webp       # Logo image file
-│
-├── _js/
-│   └── script.js       # JavaScript file for form validation (if applicable)
-│
-├── index.html          # Main HTML file containing login page
-│
-└── README.md           # Project README file containing project overview and instructions
-```
-
 ## Instructions for Running the Project
 
 1. Clone the GitHub repository:
@@ -55,4 +36,25 @@ project-nexus/
    ```bash
    git clone https://github.com/saran-decoder/Project-Nexus.git
    
-2. Open the index.html file in a web browser to view the login and signup pages.
+2. Project 1 open the index.html file in a web browser to view the login and signup pages.
+
+## Project Structure
+
+```
+Project-Nexus
+│
+├── Project 1
+|  ├── _css/
+|  │   └── styles.css      # CSS file for styling
+|  │
+|  ├── images/
+|  │   └── icon.webp       # Logo image file
+|  │
+|  ├── _js/
+|  │   └── script.js       # JavaScript file for form validation (if applicable)
+|  │
+|  ├── index.html          # Main HTML file containing login page
+|  └── signup.html         # Main HTML file containing signup page
+|
+└── README.md           # Project README file containing project overview and instructions
+```

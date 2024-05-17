@@ -34,12 +34,6 @@ body {
   min-width: 320px;
 }
 
-/* .reglog-container .logo svg {
-  height: 40px;
-  width: 40px;
-  fill: var(--primary-color);
-} */
-
 .reglog-container .reglog-form {
   width: 50%;
   box-sizing: border-box;
@@ -384,4 +378,31 @@ body {
   .reglog-container {
     margin: 0;
   }
+}
+
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--grey); /* Set the background color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--placeholder); /* Set the color of the scrollbar thumb */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text); /* Set the color of the scrollbar thumb on hover */
+}
+
+/* Disable scrollbar corner */
+::-webkit-scrollbar-corner {
+  display: none;
 }
