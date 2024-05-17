@@ -8,7 +8,7 @@
   --white: #fff;
   --text: #333;
   --slider-bg: #eff3ff;
-  --login-cta-hover: #df2d2d;
+  --reglog-cta-hover: #df2d2d;
 }
 
 * {
@@ -24,7 +24,7 @@ body {
   justify-content: space-between;
 }
 
-.login-container {
+.reglog-container {
   display: flex;
   /* max-width: 1200px; */
   background: var(--white);
@@ -34,13 +34,13 @@ body {
   min-width: 320px;
 }
 
-/* .login-container .logo svg {
+/* .reglog-container .logo svg {
   height: 40px;
   width: 40px;
   fill: var(--primary-color);
 } */
 
-.login-container .login-form {
+.reglog-container .reglog-form {
   width: 50%;
   box-sizing: border-box;
   padding: 50px;
@@ -50,30 +50,30 @@ body {
   align-items: center;
 }
 
-.login-container .login-form .login-form-inner {
+.reglog-container .reglog-form .reglog-form-inner {
   max-width: 380px;
   width: 95%;
 }
 
-.login-container .login-form .google-login-button .google-icon svg {
+.reglog-container .reglog-form .google-reglog-button .google-icon svg {
   /* height: 20px; */
   display: flex;
 }
 
-.login-container .login-form .google-login-button {
+.reglog-container .reglog-form .google-reglog-button {
   color: var(--text);
   border: 1px solid var(--grey);
   margin: 40px 0 20px;
 }
 
-.login-container .login-form .sign-in-seperator {
+.reglog-container .reglog-form .sign-in-seperator {
   text-align: center;
   color: var(--placeholder);
   position: relative;
   margin: 20px 0 20px;
 }
 
-.login-container .login-form .sign-in-seperator span {
+.reglog-container .reglog-form .sign-in-seperator span {
   background: var(--white);
   z-index: 1;
   position: relative;
@@ -81,7 +81,7 @@ body {
   font-size: 14px;
 }
 
-.login-container .login-form .sign-in-seperator:after {
+.reglog-container .reglog-form .sign-in-seperator:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -92,21 +92,21 @@ body {
   z-index: 0;
 }
 
-.login-container .login-form .login-form-group {
+.reglog-container .reglog-form .reglog-form-group {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.login-container .login-form .login-form-group label {
+.reglog-container .reglog-form .reglog-form-group label {
   font-size: 14px;
   font-weight: 500;
   color: var(--text);
   margin-bottom: 10px;
 }
 
-.login-container .login-form .login-form-group input {
+.reglog-container .reglog-form .reglog-form-group input {
   padding: 13px 20px;
   box-sizing: border-box;
   border: 1px solid var(--grey);
@@ -118,28 +118,28 @@ body {
   transition: linear 0.2s;
 }
 
-.login-container .login-form .login-form-group input:focus {
+.reglog-container .reglog-form .reglog-form-group input:focus {
   outline: none;
   border: 1px solid var(--primary-color);
 }
 
-.login-container
-  .login-form
-  .login-form-group
+.reglog-container
+  .reglog-form
+  .reglog-form-group
   input::-webkit-input-placeholder {
   color: var(--placeholder);
   font-weight: 300;
   font-size: 14px;
 }
 
-.login-container .login-form .login-form-group.single-row {
+.reglog-container .reglog-form .reglog-form-group.single-row {
   flex-direction: row;
   justify-content: space-between;
   padding-top: 5px;
 }
 
 /* custom checkbox */
-.login-container .login-form .custom-check input[type="checkbox"] {
+.reglog-container .reglog-form .custom-check input[type="checkbox"] {
   height: 23px;
   width: 23px;
   margin: 0;
@@ -154,17 +154,17 @@ body {
   cursor: pointer;
 }
 
-.login-container .login-form .custom-check input[type="checkbox"]:checked {
+.reglog-container .reglog-form .custom-check input[type="checkbox"]:checked {
   border: 2px solid var(--primary-color);
   background: var(--primary-color);
 }
 
-.login-container
-  .login-form
+.reglog-container
+  .reglog-form
   .custom-check
   input[type="checkbox"]:checked:before,
-.login-container
-  .login-form
+.reglog-container
+  .reglog-form
   .custom-check
   input[type="checkbox"]:checked:after {
   content: "";
@@ -173,8 +173,8 @@ body {
   background: var(--white);
 }
 
-.login-container
-  .login-form
+.reglog-container
+  .reglog-form
   .custom-check
   input[type="checkbox"]:checked:before {
   width: 8px;
@@ -183,8 +183,8 @@ body {
   transform: rotate(44deg);
 }
 
-.login-container
-  .login-form
+.reglog-container
+  .reglog-form
   .custom-check
   input[type="checkbox"]:checked:after {
   width: 14px;
@@ -193,17 +193,17 @@ body {
   transform: rotate(-55deg);
 }
 
-.login-container .login-form .custom-check input[type="checkbox"]:focus {
+.reglog-container .reglog-form .custom-check input[type="checkbox"]:focus {
   outline: none;
 }
 
-.login-container .login-form .custom-check {
+.reglog-container .reglog-form .custom-check {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.login-container .login-form .custom-check label {
+.reglog-container .reglog-form .custom-check label {
   margin: 0;
   color: var(--text);
   font-size: 14px;
@@ -211,18 +211,18 @@ body {
   cursor: pointer;
 }
 
-.login-container .login-form .link {
+.reglog-container .reglog-form .link {
   color: var(--primary-color);
   font-weight: 700;
   text-decoration: none;
   font-size: 14px;
 }
 
-.login-container .login-form .link:hover {
+.reglog-container .reglog-form .link:hover {
   text-decoration: underline;
 }
 
-.login-container .login-form .login-cta {
+.reglog-container .reglog-form .reglog-cta {
   color: var(--white);
   text-decoration: none;
   border: 1px solid var(--primary-color);
@@ -230,29 +230,29 @@ body {
   background: var(--primary-color);
 }
 
-.login-container .login-form .login-cta:hover {
-  background: var(--login-cta-hover);
+.reglog-container .reglog-form .reglog-cta:hover {
+  background: var(--reglog-cta-hover);
 }
 
-.login-container .onboarding {
+.reglog-container .onboarding {
   flex: 2;
   background: var(--slider-bg);
   display: none;
   width: 50%;
 }
 
-.login-container .login-form .login-form-group label .required-star {
+.reglog-container .reglog-form .reglog-form-group label .required-star {
   color: var(--primary-color);
   font-size: 18px;
   line-height: 10px;
 }
 
-.login-container .social-login {
+.reglog-container .social-login {
   display: flex;
   justify-content: space-between;
 }
 
-.login-container .social-login .rounded-button {
+.reglog-container .social-login .rounded-button {
   display: flex;
   width: auto;
   text-decoration: none;
@@ -266,7 +266,7 @@ body {
   transition: linear 0.2s;
 }
 
-.login-container .rounded-button {
+.reglog-container .rounded-button {
   display: flex;
   width: 100%;
   text-decoration: none;
@@ -280,17 +280,17 @@ body {
   transition: linear 0.2s;
 }
 
-.login-container .rounded-button:hover {
+.reglog-container .rounded-button:hover {
   box-shadow: 0px 0px 4px 0px var(--grey);
 }
 
-.login-container .body-text {
+.reglog-container .body-text {
   font-size: 14px;
   font-weight: 500;
   color: var(--text);
 }
 
-.login-container .onboarding img {
+.reglog-container .onboarding img {
   position: absolute;
   z-index: 2;
   height: -webkit-fill-available;
@@ -303,37 +303,85 @@ body {
   bottom: 30px;
 }
 
-.login-container .login-form .login-form-inner h1 {
+.reglog-container .reglog-form .reglog-form-inner h1 {
   margin-bottom: 20px;
   margin-top: 10px;
 }
 
+/* Form validation toast error message styles */
+.toast {
+  visibility: hidden;
+  max-width: fit-content;
+  margin: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 1000;
+  left: 0;right:0;
+  top: 30px;
+  font-size: 17px;
+}
+
+.toast #desc {
+  color: #fff;
+  padding: 16px;
+  display: inline-block;
+}
+
+.toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 30px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
 @media screen and (min-width: 768px) {
-  .login-container .onboarding {
+  .reglog-container .onboarding {
     display: flex;
   }
 }
 
 @media screen and (width: 768px) {
-  .login-container .onboarding {
+  .reglog-container .onboarding {
     order: 0;
   }
-  .login-container .login-form {
+  .reglog-container .reglog-form {
     order: 1;
   }
-  .login-container {
+  .reglog-container {
     height: 100vh;
   }
 }
 
 @media screen and (max-width: 420px) {
-  .login-container .login-form {
+  .reglog-container .reglog-form {
     padding: 20px;
   }
-  .login-container .login-form-group {
+  .reglog-container .reglog-form-group {
     margin-bottom: 16px;
   }
-  .login-container {
+  .reglog-container {
     margin: 0;
   }
 }

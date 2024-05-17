@@ -40,6 +40,10 @@ function validateForm() {
         return false;
     }
     showToast("Form submitted successfully", true);
+    // Function to reload the page after 4 seconds
+    setTimeout(function() {
+        window.location.href = "./index.html";
+    }, 3000);
     return true;
 }
 
@@ -48,5 +52,5 @@ function showToast(message, success = false) {
     toast.innerHTML = `<span id="desc">${message}</span>`;
     toast.style.backgroundColor = success ? "#4CAF50" : "#f44336";
     toast.className = "toast show";
-    setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 30000000);
+    setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
 }
