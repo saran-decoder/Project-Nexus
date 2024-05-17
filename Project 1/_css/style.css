@@ -30,6 +30,7 @@ body {
   background: var(--white);
   /* margin: auto; */
   width: 100%;
+  height: fit-content;
   min-width: 320px;
 }
 
@@ -310,12 +311,6 @@ body {
 @media screen and (min-width: 768px) {
   .login-container .onboarding {
     display: flex;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .login-container {
-    height: 100vh;
   }
 }
 

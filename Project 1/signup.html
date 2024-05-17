@@ -3,9 +3,59 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login - Page</title>
+        <title>Signup - Page</title>
         <link rel="shortcut icon" href="./images/icon.webp" type="image/x-icon">
         <link rel="stylesheet" href="./_css/style.css">
+        <style>
+            /* Toast styles */
+            .toast {
+                visibility: hidden;
+                max-width: fit-content;
+                margin-left: auto;
+                margin-right: 30px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 10px;
+                position: fixed;
+                z-index: 1000;
+                left: 0;right:0;
+                top: 30px;
+                font-size: 17px;
+            }
+            
+            .toast #desc {
+                color: #fff;
+                padding: 16px;
+                display: inline-block;
+            }
+            
+            .toast.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+            
+            @-webkit-keyframes fadein {
+                from {top: 0; opacity: 0;} 
+                to {top: 30px; opacity: 1;}
+            }
+            
+            @keyframes fadein {
+                from {top: 0; opacity: 0;}
+                to {top: 30px; opacity: 1;}
+            }
+            
+            @-webkit-keyframes fadeout {
+                from {top: 30px; opacity: 1;} 
+                to {top: 0; opacity: 0;}
+            }
+            
+            @keyframes fadeout {
+                from {top: 30px; opacity: 1;}
+                to {top: 0; opacity: 0;}
+            }
+        </style>
     </head>
     <body>
         <div class="login-container">
@@ -13,9 +63,10 @@
                 <img src="https://img.freepik.com/premium-photo/aurora-bifida-renowned-stokksnes-mountains-vestrahorn-cape-are-northern-lights-icelandic-reflection-crystalclear-water-with-vast-sky-backdrop-generative-ai_638974-57.jpg" alt="" />
             </div>
             <div class="login-form">
+                <div id="toast"></div>
                 <div class="login-form-inner">
-                    <h1>Login</h1>
-                    <p class="body-text">If you have an account please login.</p>
+                    <h1>Signup</h1>
+                    <p class="body-text">Create an account to get started.</p>
             
                     <div class="social-login">
                         <a href="#" class="rounded-button google-login-button">
@@ -48,29 +99,28 @@
                     </div>
             
                     <div class="sign-in-seperator">
-                        <span>OR Sign in with Email</span>
+                        <span>OR Sign up with Email</span>
                     </div>
             
                     <div class="login-form-group">
+                        <label for="username">Username <span class="required-star">*</span></label>
+                        <input type="text" autocomplete="off" placeholder="Account Username" id="username">
+                    </div>
+                    <div class="login-form-group">
                         <label for="email">Email <span class="required-star">*</span></label>
-                        <input type="email" autocomplete="off" placeholder="Account Email ?" id="email">
+                        <input type="email" autocomplete="off" placeholder="Account Email" id="email">
                     </div>
                     <div class="login-form-group">
                         <label for="pwd">Password <span class="required-star">*</span></label>
-                        <input autocomplete="off" type="password" placeholder="Account Password ?" id="pwd">
+                        <input autocomplete="off" type="password" placeholder="Account Password" id="pwd">
                     </div>
-            
-                    <div class="login-form-group single-row">
-                        <div class="custom-check">
-                            <input autocomplete="off" type="checkbox" id="remember"><label for="remember">Remember me</label>
-                        </div>
-            
-                        <a href="#" class="link forgot-link">Forgot Password ?</a>
+                    <div class="login-form-group">
+                        <label for="confirm_pwd">Confirm Password <span class="required-star">*</span></label>
+                        <input autocomplete="off" type="password" placeholder="Confirm Password" id="confirm_pwd">
                     </div>
+                    <button class="rounded-button login-cta" onclick="validateForm()">Sign Up</button>
+                    <p class="register-div">Already have an account? <a href="./index.html" class="link create-account">Sign In</a></p>
             
-                    <a href="#" class="rounded-button login-cta">Login</a>
-            
-                    <div class="register-div">Not registered yet? <a href="./signup.html" class="link create-account" -link>Create an account</a></div>
                 </div>
             </div>
         </div>
