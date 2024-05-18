@@ -17,7 +17,12 @@
 }
 
 body {
-  background: var(--bodybg);
+  background: radial-gradient(at 18% 99%, rgb(223, 229, 113) 0px, transparent 50%) repeat scroll 0% 0%, 
+              radial-gradient(at 97% 8%, rgb(118, 249, 173) 0px, transparent 50%) repeat scroll 0% 0%, 
+              radial-gradient(at 79% 82%, rgb(233, 109, 131) 0px, transparent 50%) repeat scroll 0% 0%,
+              radial-gradient(at 96% 10%, rgb(222, 81, 251) 0px, transparent 50%) repeat scroll 0% 0%,    
+              radial-gradient(at 42% 20%, rgb(116, 240, 251) 0px, transparent 50%) repeat scroll 0% 0%,
+              radial-gradient(at 4% 49%, rgb(203, 88, 218) 0px, transparent 50%) repeat scroll 0% 0%, rgba(0, 0, 0, 0) radial-gradient(at 57% 33%, rgb(218, 83, 228) 0px, #a299ff 50%) repeat scroll 0% 0%;
   font-family: "Raleway", sans-serif;
   height: 100vh;
   display: flex;
@@ -26,12 +31,13 @@ body {
 
 .reglog-container {
   display: flex;
-  /* max-width: 1200px; */
+  max-width: 1200px;
   background: var(--white);
-  /* margin: auto; */
+  margin: auto;
   width: 100%;
   height: fit-content;
   min-width: 320px;
+  border-radius: 1rem;
 }
 
 .reglog-container .reglog-form {
@@ -233,6 +239,7 @@ body {
   background: var(--slider-bg);
   display: none;
   width: 50%;
+  border-radius: 1rem;
 }
 
 .reglog-container .reglog-form .reglog-form-group label .required-star {
@@ -285,6 +292,7 @@ body {
 }
 
 .reglog-container .onboarding img {
+  border-radius: 1rem;
   position: absolute;
   z-index: 2;
   height: -webkit-fill-available;

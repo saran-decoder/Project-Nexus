@@ -8,6 +8,12 @@ var options = {
     boidColours: ["#34495e", "#e74c3c", '#2ecc71', '#9b59b6', '#f1c40f', '#1abc9c', '#fff']
 };
 var boidsCanvas = new BoidsCanvas(canvasDiv, options);
+// Ensure the canvas has no background color and adjust the z-index
+var canvasWrapper = canvasDiv.querySelector('div');
+if (canvasWrapper) {
+    canvasWrapper.style.background = 'none';
+    canvasWrapper.style.zIndex = '0';
+}
 
 
 // Signin Form Validation JavaScript
