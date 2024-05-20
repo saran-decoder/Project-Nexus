@@ -6,7 +6,7 @@ class Webconn
     public function __construct()
     {
         global $_web_conn;
-        $_web_conn_path = __DIR__.'/var/www/html/Project-Nexus/Project 2/config/connections.json';
+        $_web_conn_path = __DIR__.'/../../../config/connections.json';
         $_web_conn = file_get_contents($_web_conn_path);
         Database::getConnection();
     }

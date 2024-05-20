@@ -17,7 +17,7 @@ $webconn->initiateSession();
 // This function used to decode the json file
 function get_config($key, $default=null) {
     global $_web_conn;
-    $arr = json_decode($_web_conn);
+    $arr = json_decode($_web_conn, true);
     if (isset($arr[$key])) {
         return $arr[$key];
     } else {

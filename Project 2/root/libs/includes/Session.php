@@ -70,8 +70,9 @@ class Session
     {
         extract($data);
         $load = $_SERVER['DOCUMENT_ROOT'] . get_config('root_path') . "_templates/$name.php";
+        // die($load)
         if (is_file($load)) {
-            return $load;
+            include $load;
         } else {
             // TODO: Handle not file error message
         }

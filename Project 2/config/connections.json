@@ -3,5 +3,5 @@
     "load_username": "saran",
     "load_password": "fubu",
     "load_db_conn": "nexus_info",
-    "root_path": "/var/www/html/Project-Nexus/Project 2/root/"
+    "root_path": "/Project-Nexus/Project 2/root/"
 }
