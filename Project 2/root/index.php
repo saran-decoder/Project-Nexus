@@ -2,4 +2,10 @@
 
 include 'libs/broker.php';
 
-Session::renderPage();
+if (isset($_GET['logout'])) {
+    Session::destroy();
+    header("Location: ./");
+    die();
+} else {
+    Session::renderPage();
+}

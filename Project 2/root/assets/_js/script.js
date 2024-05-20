@@ -10,10 +10,20 @@ $(document).ready(function() {
         let email = $('#loginEmail').val().trim();
         let password = $('#loginPassword').val().trim();
 
-        if (email === "" || password === "") {
-            shake($('.login .form-content'));
+        if (email === "" && password === "") {
+            shake($('.contain.forms'));
         } else {
             // Proceed with login
+            if (email === "") {
+                shake($('#loginEmail'));
+            } else {
+                // remove the error message
+            }
+            if (password === "") {
+                shake($('#loginEmail'));
+            } else {
+                // remove the error message
+            }
         }
     });
 
@@ -24,14 +34,14 @@ $(document).ready(function() {
         let confirmPassword = $('#confirmPassword').val().trim();
 
         if (email === "" || password === "" || confirmPassword === "" || password !== confirmPassword) {
-            shake($('.signup .form-content'));
+            shake($('.contain.forms'));
         } else {
             // proceed with signup code
         }
     });
 });
 
-// 
+// This is the form change and password show JQuery
 $(document).ready(function() {
     const forms = $(".forms"),
           pwShowHide = $(".eye-icon"),
@@ -59,36 +69,3 @@ $(document).ready(function() {
         });
     });
 });
-
-
-
-
-
-
-// const forms = document.querySelector(".forms"),
-// pwShowHide = document.querySelectorAll(".eye-icon"),
-// links = document.querySelectorAll(".link");
-
-// pwShowHide.forEach(eyeIcon => {
-    // eyeIcon.addEventListener("click", () => {
-        // let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
-
-        // pwFields.forEach(password => {
-        //     if(password.type === "password"){
-        //         password.type = "text";
-        //         eyeIcon.classList.replace("bx-hide", "bx-show");
-        //         return;
-        //     }
-        //     password.type = "password";
-        //     eyeIcon.classList.replace("bx-show", "bx-hide");
-        // })
-
-    // })
-// })      
-
-// links.forEach(link => {
-    // link.addEventListener("click", e => {
-        // e.preventDefault(); //preventing form submit
-        // forms.classList.toggle("show-signup");
-    // })
-// })
