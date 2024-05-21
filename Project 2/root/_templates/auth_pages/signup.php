@@ -1,21 +1,45 @@
+<?php
+
+$signup = false;
+
+if (isset($_POST['name']) and isset($_POST['email']) and isset($_POST['phone']) and isset($_POST['password']) and !empty($_POST['password'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
+    $passing = User::signup($name, $email, $phone, $password);
+    $signup = true;
+}
+
+if ($signup) {
+    if ($passing) {
+        $path = get_config('root_path');
+        echo "<script>alert('Signup Successful!'); window.location.href = '$path';</script>";
+    } else {
+        echo "<script>alert('Signup Failed!');</script>";
+    }
+} else {
+    ?>
+
+
 <div class="form signup" id="form-contain">
     <div class="form-content">
         <header>Signup</header>
-        <form action="#" id="signupForm">
+        <form id="signupForm" method="POST" autocomplete="off">
             <div class="field input-field">
-                <input type="text" id="signupName" placeholder="Name *" class="name">
+                <input type="text" id="signupName" placeholder="Name *" name="name">
             </div>
 
             <div class="field input-field">
-                <input type="email" id="signupEmail" placeholder="Email Address *" class="email">
+                <input type="email" id="signupEmail" placeholder="Email Address *" name="email">
             </div>
 
             <div class="field input-field">
-                <input type="phone" id="signupPhone" placeholder="Phone Number *" class="phone">
+                <input type="phone" id="signupPhone" placeholder="Phone Number *" name="phone">
             </div>
 
             <div class="field input-field">
-                <input type="password" id="signupPassword" placeholder="Password *" class="password">
+                <input type="password" id="signupPassword" class="password" placeholder="Password *" name="password">
                 <i class='bx bx-hide eye-icon'></i>
             </div>
 
@@ -44,3 +68,9 @@
     </div>
 
 </div>
+
+<?php
+
+}
+
+?>

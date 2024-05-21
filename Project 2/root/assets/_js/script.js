@@ -46,15 +46,16 @@ $(document).ready(function() {
     // Function to handle form submission
     function handleFormSubmission(form, fields) {
         form.on('submit', function(e) {
-            e.preventDefault();
+            let isValid = true;
 
-            let allFieldsEmpty = fields.every(field => field.element.val().trim() === "");
+            fields.forEach(field => {
+                if (!validateField(field.element, field.regex, field.message)) {
+                    isValid = false;
+                }
+            });
 
-            if (allFieldsEmpty) {
-                shake($('#form-contain'));
-                fields.forEach(field => displayToastMessage('This field is required'));
-            } else {
-                fields.forEach(field => validateField(field.element, field.regex, field.message));
+            if (!isValid) {
+                e.preventDefault();
             }
         });
     }

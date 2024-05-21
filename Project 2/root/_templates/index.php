@@ -7,7 +7,7 @@ if (Session::isAuthenticated()) {
         <section class="contain forms">
 
             <!-- Login Form -->
-            <?php Session::loadTemplates('auth_page/login'); ?>
+            <?php Session::loadTemplates('auth_pages/login'); ?>
 
         </section>
     <?php

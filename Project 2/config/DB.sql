@@ -26,12 +26,10 @@ CREATE TABLE `auth` (
   `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(256) COLLATE utf8mb4_general_ci NOT NULL,
-  `phone` int NOT NULL,
+  `phone` varchar(14) COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(256) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`),
-  UNIQUE KEY `email` (`email`),
-  UNIQUE KEY `phone` (`phone`)
+  UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

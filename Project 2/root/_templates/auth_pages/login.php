@@ -1,7 +1,7 @@
 <div class="form login" id="form-contain">
     <div class="form-content">
         <header>Login</header>
-        <form action="#" id="loginForm">
+        <form id="loginForm" method="POST" autocomplete="off">
             <div class="field input-field">
                 <input type="email" id="loginEmail" placeholder="Email Address *" class="email">
             </div>
