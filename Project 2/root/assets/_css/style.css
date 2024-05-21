@@ -7,16 +7,16 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.contain{
+.contain {
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffe259;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffa751, #ffe259);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     column-gap: 30px;
+    background: linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+    /* background: linear-gradient(to right, #51ffef, #ffe259); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: -webkit-linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%); */
 }
 .form{
     position: absolute;
@@ -25,18 +25,6 @@
     padding: 30px;
     border-radius: 6px;
     background: #FFF;
-}
-.form.signup{
-    opacity: 0;
-    pointer-events: none;
-}
-.forms.show-signup .form.signup{
-    opacity: 1;
-    pointer-events: auto;
-}
-.forms.show-signup .form.login{
-    opacity: 0;
-    pointer-events: none;
 }
 header{
     font-size: 28px;
@@ -159,10 +147,80 @@ a.google span{
     animation-timing-function: ease-in-out;
 }
 
+.error-message {
+    border: 1px solid red !important;
+}
 
-@media screen and (max-width: 400px) {
+/* Custom Toastr CSS */
+#toast-container > .toast {
+    background-color: #ff0018 !important; /* Dark background */
+    color: #fff; /* White text */
+    border-radius: 8px !important; /* Rounded corners */
+    padding: 15px !important; /* Padding for the toast */
+    box-shadow: 0 0 0 #000 !important; /* Shadow for better visibility */
+}
+
+/* Customize the progress bar */
+#toast-container > .toast.toast-info {
+    background-color: #5bc0de; /* Info toast background color */
+}
+
+.toast-progress {
+    background-color: #FFF !important;
+}
+
+#toast-container > .toast.toast-warning {
+    background-color: #f0ad4e; /* Warning toast background color */
+}
+
+#toast-container > .toast.toast-success {
+    background-color: #5cb85c; /* Success toast background color */
+}
+
+#toast-container > .toast.toast-error {
+    background-image: none !important; /* Error toast background image */
+}
+
+/* Customize close button */
+#toast-container > .toast .toast-close-button {
+    position: static;
+    color: #fff; /* Close button color */
+    opacity: 1; /* Make close button fully opaque */
+}
+
+@media screen and (max-width: 460px) {
     .form{
         padding: 20px 10px;
+    }   
+
+    .contain {
+        background: #FFF;
     }
-    
 }
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #8b8b8b; /* Set the background color of the track */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fff; /* Set the color of the scrollbar thumb */
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e9ecef; /* Set the color of the scrollbar thumb on hover */
+  }
+  
+  /* Disable scrollbar corner */
+  ::-webkit-scrollbar-corner {
+    display: none;
+  }
+  

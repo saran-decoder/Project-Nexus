@@ -9,9 +9,6 @@ if (Session::isAuthenticated()) {
             <!-- Login Form -->
             <?php Session::loadTemplates('auth_page/login'); ?>
 
-            <!-- Signup Form -->
-            <?php Session::loadTemplates('auth_page/signup'); ?>
-
         </section>
     <?php
 }
