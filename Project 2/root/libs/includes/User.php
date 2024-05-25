@@ -18,4 +18,21 @@ class User
             return false;
         }
     }
+
+    public static function login($name, $pass)
+    {
+        $conn = Database::getConnection();
+        $sql = "SELECT * FROM `auth` WHERE `username` = '$name'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            if (password_verify($pass, $row['password'])) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 }
