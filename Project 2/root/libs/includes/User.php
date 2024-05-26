@@ -2,6 +2,22 @@
 
 class User
 {
+    private $conn;    
+    public $id;
+    
+    public function __construct($email)
+    {
+        $this->conn = Database::getConnection();
+        $sql = "SELECT `id` FROM `auth` WHERE `email` = '$email' LIMIT 1";
+        $res = $this->conn->query($sql);
+        if ($res->num_rows) {
+            $row = $res->fetch_assoc();
+            $this->id = $row['id'];
+        } else {
+            throw new Exception('Some problem in user');
+        }
+    }
+
     public static function signup($name, $email, $phone, $password)
     {
         $conn = Database::getConnection();
@@ -19,15 +35,15 @@ class User
         }
     }
 
-    public static function login($name, $pass)
+    public static function login($email, $pass)
     {
         $conn = Database::getConnection();
-        $sql = "SELECT * FROM `auth` WHERE `username` = '$name'";
+        $sql = "SELECT * FROM `auth` WHERE `email` = '$email'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             if (password_verify($pass, $row['password'])) {
-                return true;
+                return $row['email'];
             } else {
                 return false;
             }

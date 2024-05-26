@@ -81,10 +81,6 @@ $(document).ready(function() {
 });
 
 
-
-
-
-
 // This is the form change and password show JQuery
 $(document).ready(function() {
     
@@ -105,3 +101,17 @@ $(document).ready(function() {
         });
     });
 });
+
+
+// Function to set a cookie
+function setCookie(name, value, daysToExpire) {
+    var expires = "";
+    
+    if (daysToExpire) {
+      var date = new Date();
+      date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+  
+    document.cookie = name + "=" + value + expires + "; path=/";
+}

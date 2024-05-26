@@ -1,13 +1,48 @@
+<?php
+
+$login = true;
+if (isset($_POST['email']) and isset($_POST['password'])) {
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+    $user = UserSession::authenticate($email, $pass);
+    $login = false;
+}
+
+if (!$login) {
+    if ($user) {
+        $dir = Session::get('redir');
+        $dir_to = get_config('root_path');
+        if (isset($dir)) {
+            $dir_to = $dir;
+            Session::set('redir', false);
+        }
+        ?>
+        <script>
+            window.location = "<?=$dir_to?>";
+        </script>
+        <?php
+    } else {
+        ?>
+        <script>
+            alert("Invalid email or password");
+        </script>
+        <?php
+    }
+} else {
+
+?>
+
+
 <div class="form login" id="form-contain">
     <div class="form-content">
         <header>Login</header>
         <form id="loginForm" method="POST" autocomplete="off">
             <div class="field input-field">
-                <input type="email" id="loginEmail" placeholder="Email Address *" class="email">
+                <input type="email" id="loginEmail" placeholder="Email Address *" class="email" name="email">
             </div>
 
             <div class="field input-field">
-                <input type="password" id="loginPassword" placeholder="Password *" class="password">
+                <input type="password" id="loginPassword" placeholder="Password *" class="password" name="password">
                 <i class='bx bx-hide eye-icon'></i>
             </div>
 
@@ -40,3 +75,7 @@
     </div>
 
 </div>
+
+<?php
+    }
+?>
