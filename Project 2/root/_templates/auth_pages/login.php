@@ -18,7 +18,7 @@ if (!$login) {
         }
         ?>
         <script>
-            window.location = "<?=$dir_to?>";
+            window.location.href = "<?=$dir_to?>";
         </script>
         <?php
     } else {

@@ -54,7 +54,7 @@ class UserSession
 
     public function getUser()
     {
-        return new User($this->data[$this->user_id]);
+        return new User($this->user_id);
     }
 
     public function getIP()
@@ -142,6 +142,7 @@ class UserSession
                         throw new Exception('IP is not match');
                     }
                 } else {
+                    $session->removeSession();
                     throw new Exception('Session is not valid');
                 }
             } else {

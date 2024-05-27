@@ -8,7 +8,7 @@ class User
     public function __construct($email)
     {
         $this->conn = Database::getConnection();
-        $sql = "SELECT `id` FROM `auth` WHERE `email` = '$email' LIMIT 1";
+        $sql = "SELECT `id` FROM `auth` WHERE `email` = '$email' OR `id` = '$email' LIMIT 1";
         $res = $this->conn->query($sql);
         if ($res->num_rows) {
             $row = $res->fetch_assoc();

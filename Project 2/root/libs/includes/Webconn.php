@@ -14,12 +14,13 @@ class Webconn
     public function initiateSession()
     {
         Session::start();
-        if (Session::isset("session_token")) {
+        if (Session::isset("token")) {
             try {
-                Session::$usersession = UserSession::authorize(Session::get('session_token')); 
+                Session::$usersession = UserSession::authorize(Session::get('token')); 
             } 
             catch (Exception $e){
                 //TODO: Handle the initiate session exception error.
+                die($e->getMessage());
             }
         }
     }
