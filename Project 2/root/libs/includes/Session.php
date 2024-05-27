@@ -74,7 +74,7 @@ class Session
         if (is_file($load)) {
             include $load;
         } else {
-            // TODO: Handle not file error message
+            Session::loadTemplates('_error');
         }
     }
 
